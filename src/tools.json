@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "name": "开发工具",
+      "tools": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com"
+        },
+        {
+          "name": "Stack Overflow",
+          "url": "https://stackoverflow.com"
+        },
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org"
+        },
+        {
+          "name": "Baidu",
+          "url": "https://www.baidu.com"
+        }
+      ]
+    },
+    {
+      "name": "设计工具",
+      "tools": [
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com"
+        },
+        {
+          "name": "Canva",
+          "url": "https://www.canva.com"
+        },
+        {
+          "name": "Dribbble",
+          "url": "https://dribbble.com"
+        }
+      ]
+    },
+    {
+      "name": "效率工具",
+      "tools": [
+        {
+          "name": "Notion",
+          "url": "https://www.notion.so"
+        },
+        {
+          "name": "Trello",
+          "url": "https://trello.com"
+        },
+        {
+          "name": "Slack",
+          "url": "https://slack.com"
+        }
+      ]
+    },
+    {
+      "name": "学习资源",
+      "tools": [
+        {
+          "name": "Coursera",
+          "url": "https://www.coursera.org"
+        },
+        {
+          "name": "Udemy",
+          "url": "https://www.udemy.com"
+        },
+        {
+          "name": "freeCodeCamp",
+          "url": "https://www.freecodecamp.org"
+        }
+      ]
+    }
+  ]
+}
