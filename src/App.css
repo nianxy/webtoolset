@@ -1,4 +1,4 @@
-/* 自定义滚动条样式 */
+/* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -19,7 +19,7 @@
   background: rgba(107, 114, 128, 0.9);
 }
 
-/* 动画效果 */
+/* Animation effects */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -35,7 +35,7 @@
   animation: fadeInUp 0.5s ease-out forwards;
 }
 
-/* 玻璃态效果 */
+/* Glass effect */
 .glass-effect {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);

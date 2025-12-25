@@ -1,168 +1,168 @@
-# GitHub Actions 部署配置
+# GitHub Actions Deployment Configuration
 
-本项目提供了三种 GitHub Actions 部署工作流，根据您的私有仓库类型选择合适的工作流。
+This project provides three GitHub Actions deployment workflows. Choose the appropriate workflow based on your private registry type.
 
-## 工作流文件
+## Workflow Files
 
 ### 1. GitHub Container Registry (deploy.yml)
-适用于使用 GitHub Container Registry (ghcr.io) 作为私有仓库。
+Suitable for using GitHub Container Registry (ghcr.io) as private registry.
 
 ### 2. DockerHub (deploy-dockerhub.yml)
-适用于使用 DockerHub 作为私有仓库。
+Suitable for using DockerHub as private registry.
 
-### 3. 自定义私有仓库 (deploy-private.yml)
-适用于使用自定义私有仓库（如 Harbor、阿里云容器镜像服务等）。
+### 3. Custom Private Registry (deploy-private.yml)
+Suitable for using custom private registry (such as Harbor, Alibaba Cloud Container Registry Service, etc.).
 
-## 配置步骤
+## Configuration Steps
 
-### 方式一：使用 GitHub Container Registry
+### Method 1: Using GitHub Container Registry
 
-1. **启用 GitHub Packages**
-   - 进入仓库 Settings → Actions → General
-   - 在 Workflow permissions 中选择 "Read and write permissions"
+1. **Enable GitHub Packages**
+   - Go to repository Settings → Actions → General
+   - Select "Read and write permissions" in Workflow permissions
 
-2. **配置 Secrets**
-   在仓库 Settings → Secrets and variables → Actions 中添加以下 Secrets：
+2. **Configure Secrets**
+   Add the following Secrets in repository Settings → Secrets and variables → Actions:
 
-   | Secret 名称 | 说明 | 示例 |
-   |------------|------|------|
-   | `SERVER_HOST` | 服务器 IP 地址或域名 | `192.168.1.100` 或 `example.com` |
-   | `SERVER_USER` | 服务器用户名 | `root` 或 `ubuntu` |
-   | `SERVER_SSH_KEY` | SSH 私钥 | `-----BEGIN RSA PRIVATE KEY-----...` |
-   | `SERVER_PORT` | SSH 端口（可选，默认 22） | `22` |
+   | Secret Name | Description | Example |
+   |------------|-------------|---------|
+   | `SERVER_HOST` | Server IP address or domain | `192.168.1.100` or `example.com` |
+   | `SERVER_USER` | Server username | `root` or `ubuntu` |
+   | `SERVER_SSH_KEY` | SSH private key | `-----BEGIN RSA PRIVATE KEY-----...` |
+   | `SERVER_PORT` | SSH port (optional, default 22) | `22` |
 
-3. **使用工作流**
-   - 将 `deploy.yml` 重命名为 `deploy.yml`（如果需要）
-   - 推送代码到 `main` 或 `master` 分支即可自动触发部署
+3. **Use Workflow**
+   - Rename `deploy.yml` to `deploy.yml` (if needed)
+   - Push code to `main` or `master` branch to automatically trigger deployment
 
-### 方式二：使用 DockerHub
+### Method 2: Using DockerHub
 
-1. **配置 Secrets**
-   在仓库 Settings → Secrets and variables → Actions 中添加以下 Secrets：
+1. **Configure Secrets**
+   Add the following Secrets in repository Settings → Secrets and variables → Actions:
 
-   | Secret 名称 | 说明 | 示例 |
-   |------------|------|------|
-   | `DOCKERHUB_USERNAME` | DockerHub 用户名 | `yourusername` |
-   | `DOCKERHUB_TOKEN` | DockerHub 访问令牌 | `dckr_pat_xxxxx` |
-   | `SERVER_HOST` | 服务器 IP 地址或域名 | `192.168.1.100` |
-   | `SERVER_USER` | 服务器用户名 | `root` |
-   | `SERVER_SSH_KEY` | SSH 私钥 | `-----BEGIN RSA PRIVATE KEY-----...` |
-   | `SERVER_PORT` | SSH 端口（可选） | `22` |
+   | Secret Name | Description | Example |
+   |------------|-------------|---------|
+   | `DOCKERHUB_USERNAME` | DockerHub username | `yourusername` |
+   | `DOCKERHUB_TOKEN` | DockerHub access token | `dckr_pat_xxxxx` |
+   | `SERVER_HOST` | Server IP address or domain | `192.168.1.100` |
+   | `SERVER_USER` | Server username | `root` |
+   | `SERVER_SSH_KEY` | SSH private key | `-----BEGIN RSA PRIVATE KEY-----...` |
+   | `SERVER_PORT` | SSH port (optional) | `22` |
 
-2. **获取 DockerHub Token**
-   - 登录 DockerHub
+2. **Get DockerHub Token**
+   - Login to DockerHub
    - Account Settings → Security → New Access Token
-   - 创建一个具有 Read & Write 权限的 token
+   - Create a token with Read & Write permissions
 
-3. **使用工作流**
-   - 将 `deploy-dockerhub.yml` 重命名为 `deploy.yml`
-   - 推送代码到 `main` 或 `master` 分支即可自动触发部署
+3. **Use Workflow**
+   - Rename `deploy-dockerhub.yml` to `deploy.yml`
+   - Push code to `main` or `master` branch to automatically trigger deployment
 
-### 方式三：使用自定义私有仓库
+### Method 3: Using Custom Private Registry
 
-1. **配置 Secrets**
-   在仓库 Settings → Secrets and variables → Actions 中添加以下 Secrets：
+1. **Configure Secrets**
+   Add the following Secrets in repository Settings → Secrets and variables → Actions:
 
-   | Secret 名称 | 说明 | 示例 |
-   |------------|------|------|
-   | `PRIVATE_REGISTRY_URL` | 私有仓库地址 | `registry.example.com` |
-   | `PRIVATE_REGISTRY_USERNAME` | 仓库用户名 | `admin` |
-   | `PRIVATE_REGISTRY_PASSWORD` | 仓库密码 | `password123` |
-   | `PRIVATE_IMAGE_NAME` | 镜像名称 | `toolset/toolset-app` |
-   | `SERVER_HOST` | 服务器 IP 地址或域名 | `192.168.1.100` |
-   | `SERVER_USER` | 服务器用户名 | `root` |
-   | `SERVER_SSH_KEY` | SSH 私钥 | `-----BEGIN RSA PRIVATE KEY-----...` |
-   | `SERVER_PORT` | SSH 端口（可选） | `22` |
+   | Secret Name | Description | Example |
+   |------------|-------------|---------|
+   | `PRIVATE_REGISTRY_URL` | Private registry URL | `registry.example.com` |
+   | `PRIVATE_REGISTRY_USERNAME` | Registry username | `admin` |
+   | `PRIVATE_REGISTRY_PASSWORD` | Registry password | `password123` |
+   | `PRIVATE_IMAGE_NAME` | Image name | `toolset/toolset-app` |
+   | `SERVER_HOST` | Server IP address or domain | `192.168.1.100` |
+   | `SERVER_USER` | Server username | `root` |
+   | `SERVER_SSH_KEY` | SSH private key | `-----BEGIN RSA PRIVATE KEY-----...` |
+   | `SERVER_PORT` | SSH port (optional) | `22` |
 
-2. **使用工作流**
-   - 将 `deploy-private.yml` 重命名为 `deploy.yml`
-   - 推送代码到 `main` 或 `master` 分支即可自动触发部署
+2. **Use Workflow**
+   - Rename `deploy-private.yml` to `deploy.yml`
+   - Push code to `main` or `master` branch to automatically trigger deployment
 
-## 服务器准备
+## Server Preparation
 
-在目标服务器上需要预先安装 Docker：
+Docker needs to be pre-installed on the target server:
 
 ```bash
-# 安装 Docker
+# Install Docker
 curl -fsSL https://get.docker.com | sh
 
-# 启动 Docker 服务
+# Start Docker service
 sudo systemctl start docker
 sudo systemctl enable docker
 
-# 验证安装
+# Verify installation
 docker --version
 ```
 
-## 手动触发部署
+## Manual Trigger Deployment
 
-除了自动触发，您也可以手动触发部署：
+In addition to automatic triggering, you can also manually trigger deployment:
 
-1. 进入 GitHub 仓库的 Actions 页面
-2. 选择 "Build and Deploy" 工作流
-3. 点击 "Run workflow" 按钮
-4. 选择分支并点击 "Run workflow"
+1. Go to the Actions page of the GitHub repository
+2. Select "Build and Deploy" workflow
+3. Click "Run workflow" button
+4. Select branch and click "Run workflow"
 
-## 部署流程
+## Deployment Process
 
-工作流执行以下步骤：
+The workflow executes the following steps:
 
-1. **构建阶段**
-   - 检出代码
-   - 设置 Docker Buildx
-   - 登录到容器仓库
-   - 构建并推送 Docker 镜像
+1. **Build Stage**
+   - Checkout code
+   - Set up Docker Buildx
+   - Log in to container registry
+   - Build and push Docker image
 
-2. **部署阶段**
-   - SSH 连接到服务器
-   - 登录到容器仓库
-   - 拉取最新镜像
-   - 停止并删除旧容器
-   - 启动新容器
-   - 清理未使用的镜像
+2. **Deployment Stage**
+   - SSH connect to server
+   - Log in to container registry
+   - Pull latest image
+   - Stop and delete old container
+   - Start new container
+   - Clean up unused images
 
-## 访问应用
+## Access Application
 
-部署完成后，通过以下地址访问应用：
+After deployment, access the application at:
 
 ```
 http://<SERVER_HOST>:8080
 ```
 
-## 故障排查
+## Troubleshooting
 
-### SSH 连接失败
-- 检查 `SERVER_HOST`、`SERVER_USER`、`SERVER_SSH_KEY` 是否正确
-- 确保服务器 SSH 服务正常运行
-- 检查防火墙规则
+### SSH Connection Failed
+- Check if `SERVER_HOST`, `SERVER_USER`, `SERVER_SSH_KEY` are correct
+- Ensure server SSH service is running normally
+- Check firewall rules
 
-### Docker 登录失败
-- 检查容器仓库的用户名和密码/令牌是否正确
-- 确认令牌具有足够的权限
+### Docker Login Failed
+- Check if container registry username and password/token are correct
+- Confirm token has sufficient permissions
 
-### 镜像拉取失败
-- 检查镜像名称和标签是否正确
-- 确认网络连接正常
-- 检查私有仓库访问权限
+### Image Pull Failed
+- Check if image name and tag are correct
+- Confirm network connection is normal
+- Check private registry access permissions
 
-### 容器启动失败
-- 查看容器日志：`docker logs toolset-app`
-- 检查端口 8080 是否被占用
-- 确认 Docker 有足够的资源
+### Container Startup Failed
+- View container logs: `docker logs toolset-app`
+- Check if port 8080 is occupied
+- Confirm Docker has enough resources
 
-## 自定义配置
+## Custom Configuration
 
-如需修改部署配置，可以编辑工作流文件中的以下内容：
+To modify deployment configuration, you can edit the following content in the workflow file:
 
-- **端口映射**: 修改 `-p 8080:80` 中的端口号
-- **容器名称**: 修改 `CONTAINER_NAME` 变量
-- **镜像标签**: 修改 `IMAGE_TAG` 变量
-- **重启策略**: 修改 `--restart unless-stopped`
+- **Port Mapping**: Modify port number in `-p 8080:80`
+- **Container Name**: Modify `CONTAINER_NAME` variable
+- **Image Tag**: Modify `IMAGE_TAG` variable
+- **Restart Policy**: Modify `--restart unless-stopped`
 
-## 安全建议
+## Security Recommendations
 
-1. 使用 SSH 密钥而非密码认证
-2. 定期轮换访问令牌
-3. 限制 SSH 访问的 IP 地址
-4. 使用防火墙限制端口访问
-5. 定期更新 Docker 和依赖包
+1. Use SSH keys instead of password authentication
+2. Rotate access tokens regularly
+3. Restrict IP addresses for SSH access
+4. Use firewall to restrict port access
+5. Update Docker and dependencies regularly
