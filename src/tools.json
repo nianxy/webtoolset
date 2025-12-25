@@ -1,74 +1,69 @@
 {
   "categories": [
     {
-      "name": "开发工具",
+      "name": "SSL",
       "tools": [
         {
-          "name": "GitHub",
-          "url": "https://github.com"
+          "name": "JSON Formatter",
+          "url": "https://jsonformatter.org/"
         },
         {
-          "name": "Stack Overflow",
-          "url": "https://stackoverflow.com"
+          "name": "BASE64",
+          "url": "https://www.base64decode.org/"
         },
         {
-          "name": "MDN Web Docs",
-          "url": "https://developer.mozilla.org"
+          "name": "Hash/Cryptography Online Tools",
+          "url": "https://emn178.github.io/online-tools/"
         },
         {
-          "name": "Baidu",
-          "url": "https://www.baidu.com"
+          "name": "Password Generator",
+          "url": "https://www.lastpass.com/features/password-generator"
+        },
+        {
+          "name": "UUID Generator",
+          "url": "https://www.uuidgenerator.net/"
+        },
+        {
+          "name": "RSA PKCS#1/PKCS#8 Converter",
+          "url": "https://www.metools.info/code/c84.html"
         }
       ]
     },
     {
-      "name": "设计工具",
+      "name": "Math/Algorithm",
       "tools": [
         {
-          "name": "Figma",
-          "url": "https://www.figma.com"
+          "name": "Function Curve",
+          "url": "https://www.desmos.com/calculator"
         },
         {
-          "name": "Canva",
-          "url": "https://www.canva.com"
-        },
-        {
-          "name": "Dribbble",
-          "url": "https://dribbble.com"
+          "name": "Graph Editor",
+          "url": "https://csacademy.com/app/graph_editor/"
         }
       ]
     },
     {
-      "name": "效率工具",
+      "name": "Other Tools",
       "tools": [
         {
-          "name": "Notion",
-          "url": "https://www.notion.so"
+          "name": "IP Location",
+          "url": "https://ipwhois.io/"
         },
         {
-          "name": "Trello",
-          "url": "https://trello.com"
+          "name": "Timestamp Converter",
+          "url": "https://www.epochconverter.com/"
         },
         {
-          "name": "Slack",
-          "url": "https://slack.com"
-        }
-      ]
-    },
-    {
-      "name": "学习资源",
-      "tools": [
-        {
-          "name": "Coursera",
-          "url": "https://www.coursera.org"
+          "name": "SSL Certificate Validation",
+          "url": "https://www.ssllabs.com/ssltest/"
         },
         {
-          "name": "Udemy",
-          "url": "https://www.udemy.com"
+          "name": "Merge PDF",
+          "url": "https://smallpdf.com/merge-pdf"
         },
         {
-          "name": "freeCodeCamp",
-          "url": "https://www.freecodecamp.org"
+          "name": "Customize your CSS Border",
+          "url": "https://kovart.github.io/dashed-border-generator/"
         }
       ]
     }
