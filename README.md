@@ -4,6 +4,8 @@
 
 A modern toolset application built with Vite + React + Tailwind CSS.
 
+![Toolset Screenshot](screenshot.jpg)
+
 ## Features
 
 - 🎨 **Modern Interface**: Dark theme with clean and beautiful design
