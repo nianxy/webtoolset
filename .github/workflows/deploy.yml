@@ -1,4 +1,4 @@
-name: Build and Deploy to Private Registry
+name: Build and Deploy
 
 on:
   push:
