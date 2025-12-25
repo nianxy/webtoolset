@@ -1,19 +1,28 @@
 {
   "categories": [
     {
-      "name": "SSL",
+      "name": "Cryptography/Encoder",
       "tools": [
         {
-          "name": "JSON Formatter",
-          "url": "https://jsonformatter.org/"
+          "name": "Hash/Cryptography Online Tools",
+          "url": "https://emn178.github.io/online-tools/"
         },
         {
           "name": "BASE64",
           "url": "https://www.base64decode.org/"
         },
         {
-          "name": "Hash/Cryptography Online Tools",
-          "url": "https://emn178.github.io/online-tools/"
+          "name": "RSA PKCS#1/PKCS#8 Converter",
+          "url": "https://www.metools.info/code/c84.html"
+        }
+      ]
+    },
+    {
+      "name": "Generator/Formatter",
+      "tools": [
+        {
+          "name": "JSON Formatter",
+          "url": "https://jsonformatter.org/"
         },
         {
           "name": "Password Generator",
@@ -22,10 +31,6 @@
         {
           "name": "UUID Generator",
           "url": "https://www.uuidgenerator.net/"
-        },
-        {
-          "name": "RSA PKCS#1/PKCS#8 Converter",
-          "url": "https://www.metools.info/code/c84.html"
         }
       ]
     },
