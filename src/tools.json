@@ -55,6 +55,10 @@
           "url": "https://ipwhois.io/"
         },
         {
+          "name": "User Agent",
+          "url": "https://useragent.wcode.net/"
+        },
+        {
           "name": "Timestamp Converter",
           "url": "https://www.unixtimestamp.com/"
         },
