@@ -56,7 +56,7 @@
         },
         {
           "name": "Timestamp Converter",
-          "url": "https://www.epochconverter.com/"
+          "url": "https://www.unixtimestamp.com/"
         },
         {
           "name": "SSL Certificate Validation",
@@ -69,6 +69,10 @@
         {
           "name": "Customize your CSS Border",
           "url": "https://kovart.github.io/dashed-border-generator/"
+        },
+        {
+          "name": "Color Picker",
+          "url": "https://www.w3schools.com/colors/colors_picker.asp"
         }
       ]
     }
