@@ -56,6 +56,15 @@
       ]
     },
     {
+      "name": "Image",
+      "tools": [
+        {
+          "name": "SVG Trace",
+          "url": "https://svgtrace.com/"
+        }
+      ]
+    },
+    {
       "name": "Other Tools",
       "tools": [
         {
